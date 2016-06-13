@@ -1,0 +1,591 @@
+/*
+ * 	Author: Pixel Art Inc.
+ * 	Website: http://www.pixelartinc.com/
+ */
+  
+/****************************************************************************
+CSS RESET
+****************************************************************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio,
+video {	margin: 0; 	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table {	border-collapse: collapse; border-spacing: 0; }
+
+/****************************************************************************
+FONTS
+****************************************************************************/
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Bold-webfont.svg#RobotoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('fonts/Roboto-Thin-webfont.eot');
+    src: url('fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/****************************************************************************
+BASIC STYLES
+****************************************************************************/
+html{height:100%;}
+body{ background: #fff; color:#3b3b3b; font: 13px Arial, Helvetica, sans-serif; overflow-x:hidden; height:100%;}
+
+h1,h2,h3,h4,h5,h6{  }
+h1{ font-size:40px;}
+h2{ font-size:24px;}
+h3{ font-size:18px;}
+h4{ font-size:14px;}
+h5{ font-size:12px;}
+h6{ font-size:10px;}
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #00e; text-decoration: none; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+.button { display: inline-block; text-align: center; padding:20px 40px; font-family: "RobotoBold", Arial, Helvetica,sans-serif; border-radius: 25px;}
+.button_slider { position:absolute; margin-top:189px; left:40%; text-align: center; padding:20px 40px; font-family: "RobotoBold", Arial, Helvetica,sans-serif; border-radius: 25px;}
+.button.yellow { background: #fff186; color: #81751b; }
+.button.red { background:#fd4239; color:#99100a; }
+.button_slider.red { background:#fd4239; color:#99100a; }
+.button.blue { background:#08afc6; color:#115c66; margin-left:-20px !important;}
+
+.content { max-width: 960px; margin: 0px auto; }
+
+section { overflow: hidden; }
+
+.content > h1{text-align:center; font:48px/48px "RobotoBold", Arial, Helvetica,sans-serif; margin-bottom:70px;}
+.content > h1 span { border-bottom: 1px solid #000; padding-bottom: 0px; }
+.content > h2 {text-align:center; font:30px/30px "RobotoBold", Arial, Helvetica,sans-serif; margin-bottom:70px;}
+.content > h2 span { border-bottom: 1px solid #000; padding-bottom: 0px; }
+
+.phone_menu{visibility:hidden;display:none;}
+.hidden{visibility:hidden;display:none;}
+
+#home{ background:url(../images/header-pic.jpg) 50% 0 no-repeat fixed; }
+#service{ background:url(../images/servicesheader-pic.jpg) 50% 0 no-repeat fixed; }
+#blogs{ background:url(../images/blogheader-pic.jpg) 50% 0 no-repeat fixed; }
+#about{ background:url(../images/ABOUTHEADER-PIC.jpg) 50% 0 no-repeat fixed; }
+#icon1{ background: url(../images/down.png) 50% 0 no-repeat fixed; width:212px; height:550px; margin:0 auto; }
+#icon2{ background: url(../images/down_black.png) 50% 0  fixed; width:212px; height:550px; margin:0 auto;}
+#icon3{ background: url(../images/arrow.png) 50% 0 no-repeat fixed; width:212px; height:240px; margin:0 auto; margin-top:-120px;}
+#icon4{background: url(../images/arrow2.png) 50% 0 no-repeat fixed; width:212px; height:240px; margin:0 auto; margin-top:-120px;}
+#icon5{background: url(../images/arrow3.png) 50% 0 no-repeat fixed; width:212px; height:240px; margin:0 auto; margin-top:-120px;}
+
+/****************************************************************************
+HEADERS
+****************************************************************************/
+
+.header-wrapper { width: 100%; height: auto;  }
+.header-top { width: 100%; height: 100%; position:realitve; margin-bottom:-53px;  }
+.header-page{height:100%; max-height:500px;}
+.header-wrapper header { max-width: 960px; margin: 0px auto; text-align:center; }
+.header-wrapper header h1 { color: #FFF; font-family: "RobotoRegular", Arial, Helvetica,sans-serif; margin-bottom:25px; }
+.header-wrapper header h1 strong { font-family: "RobotoBold", Arial, Helvetica,sans-serif; }
+.header-wrapper header > p{color:#f5f5f5; font:15px "Roboto", Arial, Helvetica,sans-serif; margin-bottom:140px;}
+.header-main header { max-height: 520px; padding: 100px 0px 0px; max-width: 960px; }
+.header-main header .button { margin: 0; }
+.header-main header div { margin-top:50px;}
+.header-main header div  .tw { font-size:12px;}
+.header-main header div  .fb{ font-size:12px;}
+
+
+.header-two { margin-bottom: 75px; }
+.header-two header{height: 400px; padding: 100px 0px 0px;}
+.header-two header h1 span {border-top: 1px solid #fff; padding:10px 0px 0px; display: inline-block;}
+.header-two header > p {color:#fff; text-transform:uppercase;}
+
+
+/****************************************************************************
+MAIN NAVIGATION
+****************************************************************************/
+
+.sticky-wrapper { margin-bottom:80px; }
+.nav {background:url(../images/navigation-pic.png); min-height:53px; text-align:center;width:100%;z-index:10000;}
+.nav ul{ margin-left:25px;}
+.nav li{float:left;margin-right:25px; line-height:53px;}
+.nav li a{color:#4d4d4d;font:12px "RobotoRegular", Arial, Helvetica,sans-serif;}
+.nav div{float:right; margin-right:25px; margin-top:16px;}
+
+
+
+/****************************************************************************
+SLIDER
+****************************************************************************/
+
+.content { max-width: 960px; }
+.content .slider{background:url(images/slider-bgimg.png); width:1212px; min-height:880px; position:relative; left:-126px; overflow:hidden;}
+.content .slider .slides{width:756px; height:432px; position:absolute; top:30px; left:229px; }
+.content .slider p{color:#151414; font:23px "RobotoLight", Arial, Helvetica,sans-serif; line-height: 36px; width: 960px; margin: 715px auto 0px; text-align: center;}
+.content .slider p span{font-family:"RobotoBold", Arial, Helvetica,sans-serif;}
+
+
+
+/****************************************************************************
+GALLERY
+****************************************************************************/
+
+.gallery{margin-bottom:80px;}
+.gallery ul {margin-bottom:80px;}
+.gallery ul li{display:inline;float:left; position: relative;}
+.gallery ul li a { display:block; line-height: 0px; }
+.gallery .overlay {display: none;width:190px; height:190px; padding: 25px; background:#1f1f1f;position: absolute; top: 0px; left: 0px;}
+.gallery .overlay h4{color:#CCC; margin-bottom:35px; font:14px Arial, Helvetica, sans-serif;}
+.gallery .overlay p{color:#545454; margin-bottom:64px; font:12px Arial, Helvetica, sans-serif; line-height:18px; letter-spacing:1px;}
+.gallery .overlay a {color:#fff186;}
+.gallery ul li:hover .overlay { display: block; }
+
+
+
+/****************************************************************************
+SERVICES
+****************************************************************************/
+
+.services { margin-bottom: 75px; }
+.services > div { margin: 0px 0px 75px; }
+.services > div li { float: left; width:50%; }
+.services > div li h4{width:80px; float:left; font:13px "RobotoBold", Arial, Helvetica,sans-serif; line-height: 30px;}
+.services > div li p{width:400px; float:right; font:13px, Arial, Helvetica,sans-serif; line-height:24px; letter-spacing:1px;}
+.services > ul li{display:inline; float:left; width:25%;text-align:center;}
+.services > ul li h3{margin-bottom:30px;font:24px "RobotoRegular", Arial, Helvetica,sans-serif;}
+.services > ul li p{font:13px  Arial, Helvetica,sans-serif; line-height:24px; letter-spacing:1px;}
+.services > ul li a{display: block; text-align:center; margin-bottom:30px;}
+
+.pricing_table { margin-bottom:75px; }
+.pricing_table ul {width:210px; margin: 0px 15px 75px; float:left; }
+.pricing_table ul .first{background:#000; color:#FFF; font:18px "RobotoBold", Arial, Helvetica,sans-serif; text-align:center; height:40px; line-height:40px;}
+.pricing_table ul .secound{background:#373737; color:#FFF; font:18px "RobotoBold", Arial, Helvetica,sans-serif; text-align:center; height:80px;line-height:80px;}
+.pricing_table ul .secound span{color:#7c7c7c; font-size:12px;}
+.pricing_table ul .third{background:#7c7c7c; color:#FFF; font-size:12px; text-align:center; height:40px; border-bottom:#CCC solid 2px; line-height:40px;}
+.pricing_table a {color:#fff;}
+.pricing_table a:hover {color:#aaa;}
+.get_in_touch a:hover {color:#99100a;}
+
+
+/****************************************************************************
+GET IN TOUCH
+****************************************************************************/
+article.get_in_touch h4{float:left; margin-right:25px;font:13px "RobotoBold", Arial, Helvetica,sans-serif; line-height: 30px;}
+article.get_in_touch p{max-width:700px; float:left; margin-right:30px; font: 13px  Arial, Helvetica,sans-serif;line-height: 24px; letter-spacing:1px; }
+article.get_in_touch .button { float: right; }
+
+
+/****************************************************************************
+BLOG
+****************************************************************************/
+
+.blog { margin:0px 0px 70px; }
+.blog figure{width:240px;float:left;}
+.blog figure .avatar { display: block; margin: 0px 0px -40px; }
+.blog figure .author {display:inline-block; height:54px; padding:0px 30px; background:#58cb8e; border-radius:25px; font:14px "RobotoBold", Arial, Helvetica,sans-serif; line-height:54px; color:#145c35; margin: 0px 0px 5px 25px; } 
+.blog figure span{color:#6b6b6b; font:11px "RobotoLight", Arial, Helvetica,sans-serif; text-align: center; padding:0px 30px; display:inline-block; margin-left:30px; }
+.blog article { float: right;width:720px; }
+.blog article h4{color:#000; font:16px "RobotoBold", Arial, Helvetica,sans-serif; margin-bottom:30px; letter-spacing:1px;}
+.blog article h4 span{color:#8f8f8f; font: 10px Arial, Helvetica,sans-serif; vertical-align: text-top; margin-left:20px;}
+.blog article h4 span .underline{text-decoration:underline;}
+.blog article p {margin-bottom:30px; color:#3b3b3b; font:13px, Arial, Helvetica,sans-serif; line-height:24px; letter-spacing:1px;}
+.blog article a {color:#000;}
+.blog article a:hover{color:#aaa;}
+.blog article blockquote { margin: 0px 0px 30px; }
+.blog article blockquote p { color: #000000; font-weight: bold; }
+.blog article blockquote p span { font-size: 24px; margin: 0px 10px; }
+
+
+/****************************************************************************
+OTHER POSTS
+****************************************************************************/
+
+.otherpost { margin: 0px 0px 70px;}
+.otherpost ul { margin: 0px 0px 30px; }
+.otherpost ul li{height:30px;margin-bottom:15px;color:#8f8f8f; font: 10px Arial, Helvetica,sans-serif; vertical-align: text-top; letter-spacing:1px;}
+.otherpost ul li .underline{text-decoration:underline;}
+.otherpost ul li a{color:#fff;background:#000;height:30px;font:12px "Roboto", Arial, Helvetica,sans-serif;line-height:30px;display:inline-block; border-radius:15px;margin-right:10px; padding: 0px 10px; text-transform:capitalize; letter-spacing:1px;}
+.otherpost .view_all_posts { font:12px "RobotoBold", Arial, Helvetica,sans-serif; text-align: center; margin: 0px 0px 30px; }
+.otherpost .view_all_posts a {color:#000;}
+
+
+
+/****************************************************************************
+ABOUT
+****************************************************************************/
+
+.about .header_cols {margin:0px 0px 70px;}
+.about .header_cols li {width:470px; float:left;}
+.about .header_cols li.left { margin-right: 20px; }
+.about .header_cols h4 {color:#3b3b3b; font:13px "RobotoBold", Arial, Helvetica,sans-serif; margin-right:20px; float:left;}
+.about .header_cols p {color:#000; width:375px; float:right; letter-spacing:1px; line-height:24px; }
+
+.about .team { margin: 0px 0px 70px; }
+.about .team li{width:240px; text-align:center; float:left;}
+.about .team li img { display:inline-block;margin-bottom:-40px; }
+.about .team li a.member_name{display: inline-block; background:#58cb8e;padding: 0px 35px; border-radius:25px;font:14px "RobotoBold", Arial, Helvetica,sans-serif;color:#145c35; height:53px;line-height:53px;margin-left:30px;}
+.about .team li span{color:#6b6b6b;font:11px "RobotoLight", Arial, Helvetica,sans-serif; display:block; margin-left:30px; margin-top:10px;}
+.about .team li p {text-align:center; margin-bottom:30px; font-size:13px; line-height:24px;letter-spacing:1px;width:80%;margin:0px auto; color:#3b3b3b;}
+.about .team li .social { margin:25px 0px 25px 30px;height:22px; }
+.about .team li .social a{vertical-align: middle;margin: 0px 4px;display:inline-block;width: 20px;height:22px;background:url(images/socialicon.png) no-repeat;font-size:0px;line-height:0px;}
+.about .team li .social a.facebook {background-position:left center;}
+.about .team li .social a.twitter {background-position:center center;}
+.about .team li .social a.gplus {background-position:right center;}
+
+.skills{margin-bottom:70px;}
+.skills ul { margin:0px 0px 70px; }
+.skills li{background:#000; color:#fff;height:40px;width:100%;line-height:40px;padding-left:14px; margin-bottom:14px; }
+.skills li span{display:inline-block; height:40px;background:#7c7c7c; float:right;}
+.skills li .span1{width:60%;}
+.skills li .span2{width:50%;}
+.skills li .span3{width:30%;}
+.skills li .span4{width:20%;}
+.skills li .span5{width:40%;}
+
+
+/****************************************************************************
+CONTACT
+****************************************************************************/
+
+.contact_header { margin: 0px 0px 0px; }
+.contact {}
+.contact .contact-form{float:left; width:440px;}
+.contact .contact-form input[type=text]{display:block; height:20px; width:420px; padding:10px; background:#fff; color:#000; outline: none; margin: 0px 0px 1px; border: 1px solid #fff; -webkit-appearance: none; border-radius: 0; }
+.contact .contact-form textarea {height:165px;width:420px; padding:10px;background:#fff; color:#000; outline: none; resize:none; border: 1px solid #fff; font-family: Helvetica,sans-serif !important; -webkit-appearance: none; border-radius: 0; }
+.contact .contact-form .submit-button {cursor:pointer;border:none; float: right; margin-right:-5px; margin-top:20px; -webkit-appearance: none;}
+.contact .contact-form label.error { display: none !important; }
+.contact .contact-form input.error { border-color: red !important;}
+.contact > div {float:right; width:480px;}
+.contact > div p{margin-bottom:30px; color:#c2c2c2; font:13px, Arial, Helvetica,sans-serif; line-height:24px; letter-spacing:1px; }
+.contact > div p span { background: #000; border-radius: 25px; padding: 5px 20px; display: inline-block; }
+.contact > div p strong{font-family:"RobotoBold", Arial, Helvetica,sans-serif;color:#fff;}
+.contact > div .social a{vertical-align: middle;margin: 0px 4px;display:inline-block;width: 20px;height:22px;background:url(images/socialicon.png) no-repeat;font-size:0px;line-height:0px;}
+.contact > div .social a.facebook {background-position:left center;}
+.contact > div .social a.twitter {background-position:center center;}
+.contact > div .social a.gplus {background-position:right center;}
+#map_canvas { width: 100%; height: 615px; }
+.map_overlay { width: 100%; min-height: 431px; padding: 75px 0px; margin: -615px 0px 0px; background: rgba(0,0,0,0.8); position: relative; z-index: 9999; }
+.map_overlay h1 { color: #fff; }
+.map_overlay h1 span { border-color: #fff; }
+.contact .here {width:175px; height:188px; background:url(images/here.png); margin-top:-100px; margin-right:50px;}
+.success {color:#fff}
+
+/****************************************************************************
+FOOTER
+****************************************************************************/
+
+.footer-wrapper { background: #000; width: 100%;}
+.footer-wrapper footer {max-width:960px; margin:0px auto;border-top:1px solid #000;padding:20px 0px 0px; overflow: hidden;}
+.footer-wrapper footer p {color:#fff;text-align:center;font:11px "RobotoLight", Arial, Helvetica,sans-serif; margin: 0px 0px 20px;}
+.footer-wrapper footer p strong {font-family: "RobotoBold", Arial, Helvetica,sans-serif;}
+
+
+
+/****************************************************************************
+COMMENT LIST
+****************************************************************************/
+
+.comment-list { margin: 0px 0px 70px; }
+.comment-list ul li { overflow: hidden; margin: 0px 0px 20px; } 
+.comment-list ul li figure {float:left;width:150px; margin: 0px 20px 0px 0px;}
+.comment-list ul li figure .avatar {display: block; margin: 0px 0px -30px;}
+.comment-list ul li figure h5 { margin: 0px 0px 10px 15px; }
+.comment-list ul li figure h5 span { display: inline-block; padding: 0px 30px; background: #f48b37; border-radius: 25px; text-align:center; font: 11px "RobotoBold", Arial, Helvetica, sans-serif; line-height:34px; color:#975119; } 
+.comment-list ul li figure a.reply {color:#000000; margin-left:87px; font-size:11px; display:block; font-weight:bold;  }
+.comment-list .sentance {width:790px; float:right; padding-top:25px;}
+.comment-list .sentance p { line-height: 24px; letter-spacing:1px;}
+.comment-list ul li.children { margin: 0px 0px 20px 240px; }
+.comment-list ul li.children .sentance {width:550px;}
+
+
+
+/****************************************************************************
+COMMENT FORM
+****************************************************************************/
+
+.comment-form { margin: 0px 0px 70px; }
+.comment-form div input { display: block; float: left; width: 220px; padding: 10px; color: #fff !important; font: 10px Arial, Helvetica, sans-serif; line-height: 20px; background: #7c7c7c; margin: 0px 1px 1px 0px; border: none; outline: none; letter-spacing:1px; -webkit-appearance: none; border-radius: 0;}
+.comment-form textarea { margin: 0px 0px 20px; border: none; width: 940px; padding: 10px; height: 140px; resize: none; color: #fff; font: 10px Arial, Helvetica, sans-serif; background: #acacac; outline: none; letter-spacing:1px; -webkit-appearance: none; border-radius: 0; }
+.comment-form input[type=submit] { cursor: pointer; border: none; outline: none; float: right; color:#99100a; margin-right:-1px; -webkit-appearance: none;}
+
+/****************************************************************************
+BLOG LIST
+****************************************************************************/
+
+.bloglist {margin-left:10px; margin-right:10px;}
+.bloglist li { border-bottom:solid 1px #000; margin-bottom:60px; } 
+.bloglist li:last-child { margin: 0px; border: 0px; }
+.bloglist h3 { margin-bottom:20px; color:#000; font:16px "RobotoBold", Arial, Helvetica,sans-serif; }
+.bloglist span { color:#6b6b6b; font:11px "RobotoLight", Arial, Helvetica,sans-serif; margin-bottom:20px;display:inline-block; line-height: 24px; letter-spacing:1px;}
+.bloglist span .underline{text-decoration:underline;}
+.bloglist p {color:#3b3b3b;line-height:24px; margin: 0px 0px 60px; letter-spacing:1px;}
+.bloglist a{color:#000;}
+.bloglist a:hover{color:#aaa;}
+
+.blog { margin:0px 0px 70px; }
+.blog figure{width:240px;float:left;}
+.blog figure .avatar { display: block; margin: 0px 0px -40px; }
+.blog figure .author {display:inline-block; height:54px; padding:0px 30px; background:#58cb8e; border-radius:25px; font:14px "RobotoBold", Arial, Helvetica,sans-serif; line-height:54px; color:#145c35; margin: 0px 0px 5px 25px; } 
+.blog figure span{color:#6b6b6b; font:11px "RobotoLight", Arial, Helvetica,sans-serif; text-align: center; padding:0px 30px; display:inline-block; margin-left:30px; }
+.blog article { float: right;width:720px; }
+.blog article h4{color:#000; font:16px "RobotoBold", Arial, Helvetica,sans-serif; margin-bottom:30px; letter-spacing:1px;}
+.blog article h4 span{color:#8f8f8f; font: 10px Arial, Helvetica,sans-serif; vertical-align: text-top; margin-left:20px;}
+.blog article h4 span .underline{text-decoration:underline;}
+.blog article p {margin-bottom:30px; color:#3b3b3b; font:13px, Arial, Helvetica,sans-serif; line-height:24px; letter-spacing:1px;}
+.blog article blockquote { margin: 0px 0px 30px; }
+.blog article blockquote p { color: #000000; font-weight: bold; }
+.blog article blockquote p span { font-size: 24px; margin: 0px 10px; }
+
+.pagin { font:12px "RobotoBold", Arial, Helvetica,sans-serif; text-align: center; margin: 0px 0px 30px; font-weight:700; }
+.pagin a{ color:#000;}
+
+@media all and (max-width: 960px) {
+.gallery ul {width: 720px; margin: 0px auto; margin-bottom:80px;}
+.services ul {width: 480px; margin: 0px auto;}
+.services ul li{display:inline;float:left; position: relative; width:240px; margin-top:85px;}
+
+article.get_in_touch {width:720px; margin: 0px auto;}
+article.get_in_touch .button {float: left; margin-top:20px; }
+
+.content { max-width: 960px; }
+.content .slider{visibility:hidden;display:none;}
+.content .slider .slides{width:756px; height:432px; position:absolute; top:30px; left:229px; }
+.content .slider p{line-height: 36px; width: 960px; margin: 715px auto 0px;}
+
+.pricing_table ul {width: 240px; float:none; margin:0 auto; margin-top:20px;}
+.pricing_table article { margin-top:75px !important;}
+
+.blog figure{width:240px;float:none; margin:0 auto;}
+.blog article {float: none; width:720px; margin:0 auto; margin-top:40px;}
+
+.services > div {width:720px; margin:0 auto; margin-top:-92px; margin-bottom:-24px;}
+.services > div ul { float: none; width:100%;}
+.services > div li { float: left; width:100%;}
+.services > div li h4{width:80px; float:left; line-height: 30px;}
+.services > div li p{width:100%; float:left; line-height:24px; letter-spacing:1px;}
+
+.otherpost { width: 720px; margin: 0 auto; margin-bottom:100px;}
+.otherpost ul li{line-height:30px;}
+
+.contact {}
+.contact .contact-form{float:none; width:440px; margin: 0 auto;}
+.contact > div {float:none; width:480px; margin: 0 auto; margin-top:100px;}
+
+#map_canvas { width: 100%; height: 836px; }
+.map_overlay { width: 100%; min-height: 431px; padding: 75px 0px; margin: -836px 0px 0px; position: relative; z-index: 9999; }
+
+.skills ul {width:720px; margin: 0 auto;}
+
+.about .team { width:480px; margin:0 auto;}
+.about .team  li{ margin-bottom:100px;}
+.about .header_cols {margin:0px 0px 70px; width:720px; margin:0 auto;}
+.about .header_cols li {width:100%; float:none; margin-bottom:100px;}
+.about .header_cols li.left { margin-right: 20px; }
+.about .header_cols h4 {margin-right:20px; float:left; margin-bottom:16px;}
+.about .header_cols p {width:100%; float:left; letter-spacing:1px; line-height:24px; }
+
+#icon1,#icon2,#icon3,#icon4,#icon5{visibility:hidden;display:none;}
+#home{ background:url(images/header-pic.jpg) 50%; }
+#service{ background:url(images/servicesheader-pic.jpg); }
+#blogs{ background:url(images/blogheader-pic.jpg); }
+#about{ background:url(images/ABOUTHEADER-PIC.jpg); }
+
+.comment-list ul{ width:720px; margin:0 auto;}
+.comment-list ul li { overflow: visible; margin: 0px 0px 20px; } 
+.comment-list .sentance {width:450px; float:right; padding-top:25px;}
+.comment-list ul li.children { margin: 0px; }
+.comment-list ul li.children .sentance {width:450px;}
+.comment-list ul li {padding-bottom:170px !important;}
+
+.comment-form { width:720px; margin:0 auto; margin-bottom:20px; }
+.comment-form textarea{ width:720px; margin:0 auto; margin-bottom:20px; }
+.comment-form div input { width:219px;}
+}
+
+@media all and (max-width: 720px) {
+article.get_in_touch {width:480px; margin: 0px auto;}
+
+.gallery ul {width: 480px; margin: 0px auto; margin-bottom:80px;}
+
+.services ul {width: 480px; margin: 0px auto;}
+.services ul li{display:inline;float:left; position: relative; width:240px; margin-top:85px;}
+
+
+.pricing_table ul {width: 240px; margin: 0px auto; float:none;}
+.pricing_table ul {margin-top:20px;}
+.pricing_table ul:first-child {margin-top:0px;}
+
+.header-main header .tw,
+.header-main header .fb {visibility:hidden;display:none;}
+
+.blog article {float: none; width:480px; margin:0 auto; margin-top:40px;}
+
+.services > div {width:480px; margin:0 auto; margin-top:-92px; margin-bottom:-122px;}
+.services > div ul { float: none; width:100%; margin-bottom:100px;}
+.services > div li { float: left; width:100%;}
+.services > div li h4{width:80px; float:left; line-height: 30px;}
+.services > div li p{width:100%; float:left; line-height:24px; letter-spacing:1px;}
+
+.otherpost { width: 480px; margin: 0 auto; margin-bottom:100px;}
+.otherpost ul li{line-height:30px;}
+.otherpost li .hide_mobile{visibility:hidden;display:none;}
+
+.contact .contact-form{float:none; width:440px; margin: 0 auto;}
+.contact > div {float:none; width:480px; margin: 0 auto; margin-top:100px;}
+
+#map_canvas { width: 100%; height: 836px; }
+.map_overlay { width: 100%; min-height: 431px; padding: 75px 0px; margin: -836px 0px 0px; position: relative; z-index: 9999; }
+
+.skills ul {width:480px; margin: 0 auto;}
+
+.about .team { width:480px; margin:0 auto;}
+.about .team  li{ margin-bottom:100px;}
+
+.about .header_cols {margin:0px 0px 70px; width:480px; margin:0 auto;}
+.about .header_cols li {width:100%; float:none; margin-bottom:100px;}
+.about .header_cols li.left { margin-right: 20px; }
+.about .header_cols h4 {margin-right:20px; float:left; margin-bottom:16px;}
+.about .header_cols p {width:100%; float:left; letter-spacing:1px; line-height:24px; }
+
+#icon1,#icon2,#icon3,#icon4,#icon5{visibility:hidden;display:none;}
+#home{ background:url(images/header-pic.jpg) 50%; }
+#service{ background:url(images/servicesheader-pic.jpg); }
+#blogs{ background:url(images/blogheader-pic.jpg); }
+#about{ background:url(images/ABOUTHEADER-PIC.jpg); }
+
+.header-main header div {visibility:hidden;display:none;}
+.desktop_menu {visibility:hidden;display:none;}
+.phone_menu{visibility:visible;display:inline; float:left; margin-left:20px; margin-top:17px; width:150px;}
+
+.comment-list ul{ width:480px; margin:0 auto;}
+.comment-list ul li { overflow: visible; margin: 0px 0px 20px;  } 
+.comment-list .sentance {width:450px; float:left; padding-top:25px;}
+.comment-list ul li.children { margin: 0px; }
+.comment-list ul li.children .sentance {width:450px;}
+.comment-list ul li {padding-bottom:300px !important;}
+
+.comment-form { width:480px; margin:0 auto; margin-bottom:20px; }
+.comment-form textarea{ width:480px; margin:0 auto; margin-bottom:20px; }
+.comment-form div input { width:139px;}
+}
+
+@media all and (max-width: 480px) {
+.services ul {width: 240px; margin: 0px auto;}
+.services ul li{display:inline;float:left; position: relative; width:240px; margin-top:85px;}
+
+article.get_in_touch {width:240px; margin: 0px auto;}
+
+.gallery ul {width: 240px; margin: 0px auto; margin-bottom:80px;}
+
+.pricing_table ul {width: 240px; margin: 0px auto; float:none;}
+.pricing_table ul {margin-top:20px;}
+.pricing_table ul:first-child {margin-top:0px;}
+
+.header-main header .tw,
+.header-main header .fb {visibility:hidden;display:none;}
+
+.blog article {float: none; width:240px; margin:0 auto; margin-top:40px;}
+
+.services > div {width:240px; margin:0 auto; margin-top:-92px; margin-bottom:-122px;}
+.services > div ul { float: none; width:100%; margin-bottom:100px;}
+.services > div li { float: left; width:100%;}
+.services > div li h4{width:80px; float:left; line-height: 30px;}
+.services > div li p{width:100%; float:left; line-height:24px; letter-spacing:1px;}
+
+.otherpost { width: 240px; margin: 0 auto; margin-bottom:100px;}
+.otherpost li .hide_mobile{visibility:hidden;display:none;}
+
+.contact .contact-form{float:none; width:240px; margin: 0 auto;}
+.contact > div {float:none; width:240px; margin: 0 auto; margin-top:100px;}
+
+#map_canvas { width: 100%; height: 884px; }
+.map_overlay { width: 100%; min-height: 431px; padding: 75px 0px; margin: -884px 0px 0px; position: relative; z-index: 9999; }
+
+.contact .contact-form input[type=text]{display:block; height:20px; width:240px; padding:10px; outline: none; margin: 0px 0px 1px; }
+.contact .contact-form textarea {height:165px;width:240px; padding:10px; outline: none; resize:none;}
+
+.skills ul {width:240px; margin: 0 auto;}
+
+.about .team { width:240px; margin:0 auto;}
+.about .team  li{ margin-bottom:100px;}
+
+.about .header_cols {margin:0px 0px 70px; width:240px; margin:0 auto;}
+.about .header_cols li {width:100%; float:none; margin-bottom:100px;}
+.about .header_cols li.left { margin-right: 20px; }
+.about .header_cols h4 {margin-right:20px; float:left; margin-bottom:16px;}
+.about .header_cols p {width:100%; float:left; letter-spacing:1px; line-height:24px; }
+
+#icon1,#icon2,#icon3,#icon4,#icon5{visibility:hidden;display:none;}
+#home{ background:url(images/header-pic.jpg) 50%; }
+#service{ background:url(images/servicesheader-pic.jpg); }
+#blogs{ background:url(images/blogheader-pic.jpg); }
+#about{ background:url(images/ABOUTHEADER-PIC.jpg); }
+
+.header-main header div {visibility:hidden;display:none;}
+.header-main header h1 {margin-top:-90px;}
+.header-main header p {visibility:hidden;display:none;}
+.header-main header .button {margin-bottom:20px;}
+
+.comment-list ul{ width:240px; margin:0 auto;}
+.comment-list ul li { overflow: visible; margin: 0px 0px 20px;  } 
+.comment-list .sentance {width:240px; float:left; padding-top:25px;}
+.comment-list ul li.children { margin: 0px; }
+.comment-list ul li.children .sentance {width:240px;}
+.comment-list ul li {padding-bottom:450px !important;}
+
+.comment-form { width:240px; margin:0 auto; margin-bottom:20px; }
+.comment-form textarea{ width:240px; margin:0 auto; margin-bottom:20px;}
+.comment-form div input { width:240px;}
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+#icon1,#icon2,#icon3,#icon4,#icon5{visibility:hidden;display:none;}
+#home{ background:url(../images/header-pic-2.jpg) 50%; }
+#service{ background:url(images/servicesheader-pic.jpg); }
+#blogs{ background:url(images/blogheader-pic.jpg); }
+#about{ background:url(images/ABOUTHEADER-PIC.jpg); }
+}

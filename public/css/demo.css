@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	counter-reset: gridcounter;
+	color: #000;
+	background: #f9f9f9;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #999;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #000;
+	outline: none;
+}
+
+.container{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* Content */
+
+.grid {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding: 0;
+	list-style: none;
+	max-width: 60em;
+	margin: 3em auto 0;
+}
+
+.grid__item {
+	position: relative;
+	text-align: center;
+	background: #f0f0f0;
+	margin: 0 0 5em;
+	width: 100%;
+	min-height: 36em;
+	display: -ms-flexbox;
+	-ms-flex-pack: center;
+	-ms-flex-align: center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-align-content: center;
+	align-content: center;
+}
+
+.grid__item::before {
+	content: counter(gridcounter);
+	font-size: 5.5em;
+	font-weight: bold;
+	line-height: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	counter-increment: gridcounter;
+	text-align: center;
+	color: #2b2929;
+	font-family: 'Patrick Hand SC', cursive;
+	-webkit-transform: translate3d(0.2em,50%,0);
+	transform: translate3d(0.2em,50%,0);
+}
