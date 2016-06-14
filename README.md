@@ -3,6 +3,9 @@
 2. 可以实现日记（公开和非公开），心情和交友互动功能。
 3. 第一版本主要夯实了框架和基类，后续功能会逐渐丰富。
 
+## 项目展示地址：
+http://hellotc.applinzi.com/
+
 ## web后端
 1. 本项目使用了小而优雅的CI框架。（文档地址：http://codeigniter.org.cn/user_guide/index.html）。
 2. 项目基于SAE平台，由于SAE对写文件的限制，实现图片上传非常繁琐，$config['upload_path'] 必须使用SAE中设定的storage名称（storage服务需开启和设置），具体可参见SAE的storage文档。
