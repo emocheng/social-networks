@@ -3,8 +3,14 @@
 2. 可以实现日记（公开和非公开），心情和交友互动功能。
 3. 第一版本主要夯实了框架和基类，后续功能会逐渐丰富。
 
+# 迷宫-beta第二版说明：
+1. 增加了登录验证
+2. 增加了消息推送通知
+3. 优化了搜索代码
+3. 服务器迁移腾讯云
+
 ## 项目展示地址：
-http://hellotc.applinzi.com/
+http://www.ohmymaze.com/
 
 ## web后端
 1. 本项目使用了小而优雅的CI框架。（文档地址：http://codeigniter.org.cn/user_guide/index.html）。
